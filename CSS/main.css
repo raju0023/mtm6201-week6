@@ -1,3 +1,12 @@
+:root {
+    --special-color: tomato;
+    --second-color: midnightblue;
+    --light-color: lightgrey;
+    --dark-color: black;
+    --bright-color: aqua;
+}
+
+
 /* . is class name for selector */
 .container {
     max-width: 900px;
@@ -35,4 +44,71 @@ nav a:focus{
 
 nav a:active{
     transform: scale(1.4) translateX(10px);
+}
+
+/* > is direct child cpmbinator */
+main>p {
+    font-size: 1.25rem;
+}
+
+/* + is the adjacent combinator */
+h2+p {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem;
+
+}
+
+/* curson maatan vendi */
+.stars span:hover {
+    cursor: pointer;
+}
+
+/* oru star hover cheyumbol baakiullathinte opacity kurakan */
+/* ~ is sibling combinator */
+.stars span:hover~span {
+    opacity: .5;
+}
+
+/* [] is for attribute selection */
+a[href="#"] {
+    color:var(--special-color);
+}
+
+/* ^= is for begins with */
+a[href^="http"] {
+    border-left: 6px solid var(--special-color);
+    padding-left: 1em;
+    border-right: 6px solid var(--special-color);
+    padding-right: 1em;
+}
+/* $ is for ends with */
+a[href$=".pdf"]::after {
+    content: "\2913";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: crimson;
+}
+
+/* + is adjacent combinator, ::first-line is to select the text in the first line */
+h2+p::first-line {
+    color: var(--special-color);
+}
+
+/* + is adjacent combinator, ::first-letter is to select the first letter   */
+h3+p::first-letter {
+    background-color: var(--second-color);
+    color: var(--bright-color);
+    font-size: 1.25rem;
+    padding: .25em;
+    margin: .15em;
+}
+
+.google {
+    display: block;
+    background-color: var(--second-color);
+    color: var(--light-color);
+    padding: 2rem;
+    margin: 1rem;
+    width: calc(100% - 6px - 1rem - 1rem - 1rem - 2rem); /* ithile rem venamenkil add cheythu orumich ezhutham. example- ithil 5rem ennu ezhutham */
 }
