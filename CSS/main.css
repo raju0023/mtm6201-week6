@@ -1,0 +1,38 @@
+/* . is class name for selector */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* space is the descendant combinator */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* navigation nu space koduthu */
+nav ul li {
+    flex: 1;
+}
+
+/* LoVe HAte (Link,Visited,Hover and Active) */
+nav a,
+nav a:link,
+nav a:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .5s;
+}
+
+nav a:hover,
+nav a:focus{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+nav a:active{
+    transform: scale(1.4) translateX(10px);
+}
